@@ -50,27 +50,27 @@ public class Fragment_edit_item extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View layoutInflater=inflater.inflate(R.layout.fragment_edit_item,container,false);
 
-        itemName=layoutInflater.findViewById(R.id.tvItemName);
-        notebookRef.get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        StringBuilder data= new StringBuilder();
-
-                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                            String item = documentSnapshot.getString(KEY_ITEM);
-                            String stock = documentSnapshot.getString(KEY_STOCK);
-                            String cur_stock = documentSnapshot.getString(KEY_CUR_STOCK);
-                            String mPrice = documentSnapshot.getString(KEY_OPRICE);
-                            String oPrice = documentSnapshot.getString(KEY_MPRICE);
-                            data.append(KEY_ITEM + " : ").append(item).append("\n").append(KEY_STOCK).append(" : ").append(stock).append("\n").append(KEY_CUR_STOCK).append(" : ").append(cur_stock).append("\n").append(KEY_MPRICE).append(" : Rs. ").append(mPrice).append("\n").append(KEY_OPRICE).append(" : Rs. ").append(oPrice).append("\n\n\n");
-
-                        }
-                        itemName.setMovementMethod(new ScrollingMovementMethod());
-                        itemName.setText(data.toString());
-
-                    }
-                });
+//        itemName=layoutInflater.findViewById(R.id.tvItemName);
+//        notebookRef.get()
+//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                        StringBuilder data= new StringBuilder();
+//
+//                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+//                            String item = documentSnapshot.getString(KEY_ITEM);
+//                            String stock = documentSnapshot.getString(KEY_STOCK);
+//                            String cur_stock = documentSnapshot.getString(KEY_CUR_STOCK);
+//                            String mPrice = documentSnapshot.getString(KEY_OPRICE);
+//                            String oPrice = documentSnapshot.getString(KEY_MPRICE);
+//                            data.append(KEY_ITEM + " : ").append(item).append("\n").append(KEY_STOCK).append(" : ").append(stock).append("\n").append(KEY_CUR_STOCK).append(" : ").append(cur_stock).append("\n").append(KEY_MPRICE).append(" : Rs. ").append(mPrice).append("\n").append(KEY_OPRICE).append(" : Rs. ").append(oPrice).append("\n\n\n");
+//
+//                        }
+//                        itemName.setMovementMethod(new ScrollingMovementMethod());
+//                        itemName.setText(data.toString());
+//
+//                    }
+//                });
 
 
 
