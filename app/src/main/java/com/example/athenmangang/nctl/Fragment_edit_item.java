@@ -38,7 +38,7 @@ public class Fragment_edit_item extends Fragment {
     private static final String TAG = "Edit_Item";
     FirebaseFirestore db=FirebaseFirestore.getInstance();
     private CollectionReference notebookRef = db.collection("Items");
-    TextView itemname;
+    TextView itemName;
      private static final String KEY_ITEM="Name";
     private static final String KEY_STOCK="Item Stock";
     private static final String KEY_CUR_STOCK="Current Stock";
@@ -50,7 +50,7 @@ public class Fragment_edit_item extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View layoutInflater=inflater.inflate(R.layout.fragment_edit_item,container,false);
 
-        itemname=layoutInflater.findViewById(R.id.tvItemName);
+        itemName=layoutInflater.findViewById(R.id.tvItemName);
         notebookRef.get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
@@ -66,8 +66,8 @@ public class Fragment_edit_item extends Fragment {
                             data.append(KEY_ITEM + " : ").append(item).append("\n").append(KEY_STOCK).append(" : ").append(stock).append("\n").append(KEY_CUR_STOCK).append(" : ").append(cur_stock).append("\n").append(KEY_MPRICE).append(" : Rs. ").append(mPrice).append("\n").append(KEY_OPRICE).append(" : Rs. ").append(oPrice).append("\n\n\n");
 
                         }
-                        itemname.setMovementMethod(new ScrollingMovementMethod());
-                        itemname.setText(data.toString());
+                        itemName.setMovementMethod(new ScrollingMovementMethod());
+                        itemName.setText(data.toString());
 
                     }
                 });
