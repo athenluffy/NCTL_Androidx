@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "472208859748",
+    "firebase_url": "https://androidfb-c2c91.firebaseio.com",
+    "project_id": "androidfb-c2c91",
+    "storage_bucket": "androidfb-c2c91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472208859748:android:5d62916603c8d62b",
+        "android_client_info": {
+          "package_name": "com.example.athenmangang.nctl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472208859748-6oh2hock7a7k3gscff369dm39dpjlu4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.athenmangang.nctl",
+            "certificate_hash": "406b0269ab5f1c02a0344137cf72e8d054f0b148"
+          }
+        },
+        {
+          "client_id": "472208859748-vt2gtjd0ur80q9ud9piru8uqealre5e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNoB7QhIxxb0S5fb1gxY45v-IJRsDCLzc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472208859748-vt2gtjd0ur80q9ud9piru8uqealre5e9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-7917863328934131~2161130266"
+    }
+  ],
+  "configuration_version": "1"
+}

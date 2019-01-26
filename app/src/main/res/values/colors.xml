@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorAccent">#0B23AC</color>
+    <color name="text">#3fa1ca</color>
+    <color name="grey_100">#4858B6</color>
+    <color name="frag">#E4C959</color>
+    <color name="frag2">#8E24AA</color>
+    <color name="frag3">#7CB342</color>
+    <color name="frag4">#209AAA</color>
+</resources>

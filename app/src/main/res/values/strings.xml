@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">NCTL</string>
+    <string name="longForm">Ningthoujam Chaokhat Thoudang Lup</string>
+    <string name="developer">Parei-LLC. All Rights Reserved</string>
+    <string name="login_Input">Enter Email/Mobile Number</string>
+    <string name="login_Pass">Enter Password</string>
+    <string name="login">LOGIN</string>
+    <string name="fgt_Password">Forgot Password?</string>
+    <string name="newUser">New User? SignUp</string>
+    <string name="title_activity_landing">Landing</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Logout</string>
+    <string name="my_name">Boris Ningthoujam</string>
+    <string name="my_mail">ningthoujamborison33@gmail.com</string>
+    <string name="ond">Open Navigation Drawer</string>
+    <string name="cnd">Close Navigation Drawer</string>
+    <string name="share">share</string>
+    <string name="help">help&amp;feedback</string>
+    <string name="nav_menu1">Rent Item</string>
+    <string name="nav_menu2">Add Item</string>
+    <string name="nav_menu3">View History</string>
+    <string name="nav_menu4">Generate Report</string>
+    <string name="add_item_edit_text">Enter Item Name</string>
+    <string name="add_item_Stock">Enter Available Stock</string>
+    <string name="add_item_Price">Enter Item Price</string>
+    <string name="save">SAVE</string>
+    <string name="add_member_Price">Enter Member Price</string>
+    <string name="add_other_Price">Enter Other Price</string>
+    <string name="nav_editItem">Edit Item</string>
+</resources>
