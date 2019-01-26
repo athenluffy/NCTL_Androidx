@@ -63,9 +63,9 @@ public class Fragment_add_item extends Fragment {
             public void onClick(View v) {
                 String name=itemName.getEditText().getText().toString();
                 String stock=itemStock.getEditText().getText().toString();
-                String txtOtherPrice= memberPrice.getEditText().getText().toString();
-                String txtMemberPrice=otherPrice.getEditText().getText().toString();
-                if(name!=null && txtOtherPrice!=null && stock!=null && txtMemberPrice!=null && Integer.parseInt(txtMemberPrice)<=Integer.parseInt(txtOtherPrice))
+                String txtMemberPrice= memberPrice.getEditText().getText().toString();
+                String txtOtherPrice=otherPrice.getEditText().getText().toString();
+                if(name!=null && txtOtherPrice!=null && stock!=null && txtMemberPrice!=null )
                 {
                     db=FirebaseFirestore.getInstance();
                     Map<String,Object> newItem= new  HashMap<>();

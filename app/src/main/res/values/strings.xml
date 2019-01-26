@@ -27,5 +27,5 @@
     <string name="save">SAVE</string>
     <string name="add_member_Price">Enter Member Price</string>
     <string name="add_other_Price">Enter Other Price</string>
-    <string name="nav_editItem">Edit Item</string>
+    <string name="nav_editItem">View/Edit Item</string>
 </resources>

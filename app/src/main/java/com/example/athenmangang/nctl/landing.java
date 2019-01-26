@@ -73,8 +73,8 @@ public class landing extends AppCompatActivity implements NavigationView.OnNavig
 
         if (savedInstanceState == null) {
             //open a fragment at loading
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragment_add_item()).commit();
-            navigationView.setCheckedItem(R.id.nav_2);//set selected
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Fragment_edit_item()).commit();
+            navigationView.setCheckedItem(R.id.nav_3);//set selected
         }
     }
 

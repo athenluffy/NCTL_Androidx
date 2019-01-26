@@ -1,38 +1,58 @@
 package com.example.athenmangang.nctl.object;
 
 public class Item {
-    private  String Name;
-    private String Stock;
+    private String itemName;
+    private String stock;
     private String curStock;
-    private String mPrice;
-    private String oPrice;
-    public  Item(String name,String stock,String curStock,String mPrice,String oPrice)
-    {
-        Name=name;
-        Stock=stock;
-        this.curStock=curStock;
-        this.mPrice=mPrice;
-        this.oPrice=oPrice;
+    private String memberPrice;
+    private String otherPrice;
+
+    public Item(String itemName, String stock,String curStock, String memberPrice, String otherPrice ) {
+    this.itemName=itemName;
+    this.stock=stock;
+    this.curStock=curStock;
+    this.memberPrice=memberPrice;
+    this.otherPrice=otherPrice;
 
     }
 
-    public String getName() {
-        return Name;
+    public String getItemName() {
+        return itemName;
     }
 
     public String getStock() {
-        return Stock;
+        return stock;
     }
 
     public String getCurStock() {
         return curStock;
     }
 
-    public String getmPrice() {
-        return mPrice;
+    public String getMemberPrice() {
+        return memberPrice;
     }
 
-    public String getoPrice() {
-        return oPrice;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public void setStock(String stock) {
+        this.stock = stock;
+    }
+
+    public void setCurStock(String curStock) {
+        this.curStock = curStock;
+    }
+
+    public void setMemberPrice(String memberPrice) {
+        this.memberPrice = memberPrice;
+    }
+
+    public void setOtherPrice(String otherPrice) {
+        this.otherPrice = otherPrice;
+    }
+
+    public String getOtherPrice() {
+        return otherPrice;
     }
 }
