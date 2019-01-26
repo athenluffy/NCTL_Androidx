@@ -39,13 +39,6 @@ public class Fragment_edit_item extends Fragment {
     FirebaseFirestore db=FirebaseFirestore.getInstance();
     private CollectionReference notebookRef = db.collection("Items");
     TextView itemname;
-    /*
-    newItem.put("Name",name);
-                    newItem.put("Item Stock",stock);
-                    newItem.put("Current Stock",stock);
-                    newItem.put("Member Price",txtmemberPrice);
-                    newItem.put("Other Price",txtotherPrice);
-    */
      private static final String KEY_ITEM="Name";
     private static final String KEY_STOCK="Item Stock";
     private static final String KEY_CUR_STOCK="Current Stock";

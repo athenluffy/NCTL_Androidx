@@ -63,17 +63,17 @@ public class Fragment_add_item extends Fragment {
             public void onClick(View v) {
                 String name=itemName.getEditText().getText().toString();
                 String stock=itemStock.getEditText().getText().toString();
-                String txtotherPrice= memberPrice.getEditText().getText().toString();
-                String txtmemberPrice=otherPrice.getEditText().getText().toString();
-                if(name!=null && txtotherPrice!=null && stock!=null && txtmemberPrice!=null)
+                String txtOtherPrice= memberPrice.getEditText().getText().toString();
+                String txtMemberPrice=otherPrice.getEditText().getText().toString();
+                if(name!=null && txtOtherPrice!=null && stock!=null && txtMemberPrice!=null && Integer.parseInt(txtMemberPrice)<=Integer.parseInt(txtOtherPrice))
                 {
                     db=FirebaseFirestore.getInstance();
                     Map<String,Object> newItem= new  HashMap<>();
                     newItem.put(KEY_ITEM,name);
                     newItem.put(KEY_STOCK,stock);
                         newItem.put(KEY_CUR_STOCK,stock);
-                    newItem.put(KEY_MPRICE,txtmemberPrice);
-                    newItem.put(KEY_OPRICE,txtotherPrice);
+                    newItem.put(KEY_MPRICE,txtMemberPrice);
+                    newItem.put(KEY_OPRICE,txtOtherPrice);
                     //add with automatic document id
                     /*
                     db.collection("Items").add(newItem).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
