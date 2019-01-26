@@ -26,7 +26,7 @@ public class Fragment_edit_item extends Fragment {
     private static final String TAG = "Edit_Item";
     FirebaseFirestore db=FirebaseFirestore.getInstance();
     private CollectionReference notebookRef = db.collection("Items");
-     private static final String KEY_ITEM="Name";
+    private static final String KEY_ITEM="Name";
     private static final String KEY_STOCK="Item Stock";
     private static final String KEY_CUR_STOCK="Current Stock";
     private static final String KEY_MPRICE="Member Price";

@@ -26,7 +26,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         //inflating cardview
-        View v= LayoutInflater.from(context).inflate(R.layout.layout_cardview,viewGroup,false);
+        View v= LayoutInflater.from(context).inflate(R.layout.cardview_item_list,viewGroup,false);
         return new ItemViewHolder(v);
     }
 
