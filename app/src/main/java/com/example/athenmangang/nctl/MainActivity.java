@@ -21,6 +21,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +30,16 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG ="MainActivity" ;
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
+    FirebaseFirestore db=FirebaseFirestore.getInstance();
+    FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+            .setTimestampsInSnapshotsEnabled(true)
+            .build();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db.setFirestoreSettings(settings);
 
 // ...
 // Initialize Firebase Auth

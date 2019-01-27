@@ -2,7 +2,10 @@ package com.example.athenmangang.nctl.object;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,14 +34,38 @@ public class Select_item_Adapter extends RecyclerView.Adapter<Select_item_Adapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ItemViewHolder itemViewHolder, int i) {
     Select_item item=select_items.get(i);
     String item_name=item.getItemName();
     String stock=item.getCurStock();
-    String price=item.getPrice();
+    final String price=item.getPrice();
     itemViewHolder.itemCkecked.setText(item_name);
-    itemViewHolder.price.setText(price);
+    itemViewHolder.price.setText("Price : Rs."+price);
     itemViewHolder.stock.setText(stock);
+    itemViewHolder.qty.getEditText().addTextChangedListener(new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            itemViewHolder.totalPrice.setText("Total price: Rs.0");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String no=s.toString();
+            if (s.length()==0)
+            {
+                itemViewHolder.totalPrice.setText("Total Price : Rs.0");
+
+            }
+            else {
+                itemViewHolder.totalPrice.setText("Total Price : Rs."+Integer.parseInt(price)*Integer.parseInt(no));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    });
     }
 
     @Override
@@ -48,13 +75,16 @@ public class Select_item_Adapter extends RecyclerView.Adapter<Select_item_Adapte
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         CheckBox itemCkecked;
-        TextView stock,price;
+        TextView stock,price,totalPrice;
+        TextInputLayout qty;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
             itemCkecked=itemView.findViewById(R.id.optCheckBox);
             stock=itemView.findViewById(R.id.tvRentItemStock);
             price=itemView.findViewById(R.id.tvRentItemPrice);
+            totalPrice=itemView.findViewById(R.id.tvTotalPrice);
+            qty=itemView.findViewById(R.id.txtRentQty);
 
         }
     }
