@@ -50,12 +50,7 @@ public class Fragment_rent_item extends Fragment {
         //Select User type
 
         checkout=layoutInflater.findViewById(R.id.fabCheckout);
-        checkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v,"Clicked fab",Snackbar.LENGTH_SHORT).show();
-            }
-        });
+
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(getContext(), android.R.style.Theme_Material_Dialog_Alert);
         builder.setTitle("Choose Type").setCancelable(false).
@@ -124,7 +119,12 @@ public class Fragment_rent_item extends Fragment {
             }
         });
 builder.show();
-
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v,"Clicked fab",Snackbar.LENGTH_SHORT).show();
+            }
+        });
         return layoutInflater;
     }
 }
